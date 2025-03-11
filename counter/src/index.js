@@ -18,13 +18,14 @@ export default {
     // ID for two different strings (or for different classes).
     let id = env.COUNTERS.idFromName(name);
 
-	console.log("id" + " " + id)
+	  console.log("id" + " " + id)
 
     // Construct the stub for the Durable Object using the ID.
     // A stub is a client Object used to send messages to the Durable Object.
     let stub = env.COUNTERS.get(id);
+    console.log(typeof(stub))
 
-	console.log("stub" + " " + stub)
+	  console.log("stub" + " " + stub)
 
     // Send a request to the Durable Object using RPC methods, then await its response.
     let count = null;
